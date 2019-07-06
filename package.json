@@ -1,0 +1,50 @@
+{
+    "name": "currency-calculator",
+    "version": "1.0.0",
+    "description": "Currency calculator using NBP API",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server --mode development --hot --inline",
+        "build": "webpack --mode production"
+    },
+    "keywords": [
+        "currency",
+        "gold",
+        "exchange"
+    ],
+    "author": "lukaszdyszy",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.5.0",
+        "@babel/preset-env": "^7.5.0",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^2.1.1",
+        "file-loader": "^3.0.1",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.5.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "vue-loader": "^15.7.0",
+        "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.35.2",
+        "webpack-cli": "^3.3.5",
+        "webpack-dev-server": "^3.7.2"
+    },
+    "dependencies": {
+        "vue": "^2.6.10",
+        "vue-chart-js": "^1.4.1",
+        "vue-router": "^3.0.7"
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "modules": "commonjs",
+                    "targets": {
+                        "node": "current"
+                    }
+                }
+            ]
+        ]
+    }
+}
