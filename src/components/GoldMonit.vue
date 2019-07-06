@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import API from "../api.js";
+
 export default {
     data(){
         return {
@@ -29,7 +31,7 @@ export default {
                 self.currentPrice = JSON.parse(this.responseText)[0];
             }
         };
-        price.open("GET", 'http://api.nbp.pl/api/cenyzlota', true);
+        price.open("GET", API + 'cenyzlota', true);
         price.send();
     }
 }

@@ -16,6 +16,7 @@
 <script>
 	import Calc from "../components/Calc.vue";
 	import Recentlist from "../components/Recentlist.vue";
+	import API from "../api.js";
 
 	export default {
 		components: {
@@ -48,14 +49,14 @@
 					self.addGold();
 				}
 			};
-			table.open("GET", "http://api.nbp.pl/api/exchangerates/tables/a", true);
+			table.open("GET", API + "exchangerates/tables/a", true);
 			table.send();
 		},
 		methods: {
 			addGold() {
                 let self = this;
 				let gold = new XMLHttpRequest();
-				gold.open("GET", "http://api.nbp.pl/api/cenyzlota", true);
+				gold.open("GET", API + "cenyzlota", true);
 				gold.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
                         self.currencyList.push({

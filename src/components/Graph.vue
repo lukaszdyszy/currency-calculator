@@ -22,6 +22,7 @@
 
 <script>
 import VueChart from 'vue-chart-js'
+import API from "../api.js";
 
 export default {
     components: {
@@ -62,7 +63,7 @@ export default {
                     self.chartData['labels'] = chartLabels;
                 }
             }
-            last.open("GET", 'http://api.nbp.pl/api/exchangerates/rates/a/'+self.$parent.currencyListG[i]['code']+'/last/10', false);
+            last.open("GET", API + 'exchangerates/rates/a/'+self.$parent.currencyListG[i]['code']+'/last/10', false);
             last.send();
         }
     },

@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import API from "../api.js";
+
 export default {
     data(){
         return {
@@ -79,7 +81,7 @@ export default {
                     self.error = true;
                 }
             }
-            query.open("GET", 'http://api.nbp.pl/api/cenyzlota/'+start+'/'+end, true);
+            query.open("GET", API + 'cenyzlota/'+start+'/'+end, true);
             query.send();
         }
     },

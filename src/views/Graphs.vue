@@ -39,6 +39,7 @@
 
 <script>
 import VueChart from 'vue-chart-js'
+import API from "../api.js";
 
 export default {
     components: {
@@ -79,7 +80,7 @@ export default {
                 self.listReady = true;
             }
         };
-        table.open("GET", 'http://api.nbp.pl/api/exchangerates/tables/a', true);
+        table.open("GET", API + 'exchangerates/tables/a', true);
         table.send();
     },
     methods: {
@@ -115,7 +116,7 @@ export default {
                         }
                     }
 
-                    query.open("GET", 'http://api.nbp.pl/api/exchangerates/rates/a/'+code+'/'+self.dates[0]+'/'+self.dates[1], false);
+                    query.open("GET", API + 'exchangerates/rates/a/'+code+'/'+self.dates[0]+'/'+self.dates[1], false);
                     query.send();
                 }
             }
