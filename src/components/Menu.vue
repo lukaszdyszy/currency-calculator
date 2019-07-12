@@ -1,8 +1,10 @@
 <template lang="html">
     <div id="header">
         <div class="logo">
-            <img src="../assets/money17-512.png" class="icon">
-            Kalkulator Walut
+            <router-link to="/">
+                <img src="../assets/money17-512.png" class="icon">
+                Kalkulator Walut
+            </router-link>
         </div>
         <div class="r-head">
             <i class="fas fa-bars fa-2x" @click="Mopened = !Mopened"></i>
@@ -36,12 +38,27 @@ export default {
 }
 .logo{
     width: 50%;
+    height: 100%;
     float: left;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 1.5rem;
     letter-spacing: 3px;
+    overflow-x: visible;
+}
+.logo a.router-link-exact-active{
+    color: inherit;
+}
+.logo a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0;
+    text-align: left;
+    white-space: nowrap;
 }
 img.icon{
     width: 64px;
