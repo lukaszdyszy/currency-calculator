@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "dev": "webpack-dev-server --mode development --hot --inline",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "deploy": "git checkout gh-pages && git checkout master src && npm run build && git add dist && git commit -m 'deployment'",
+        "postdeploy": "git subtree push --prefix dist origin gh-pages"
     },
     "keywords": [
         "currency",
