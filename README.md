@@ -1,2 +1,3 @@
 # Currency calculator using NBP API
-[https://lukaszdyszy.github.io/currency-calculator/#/](https://lukaszdyszy.github.io/currency-calculator/#/)
+DEMO: [https://lukaszdyszy.github.io/currency-calculator/#/](https://lukaszdyszy.github.io/currency-calculator/#/)
+API: [http://api.nbp.pl/](http://api.nbp.pl/)
